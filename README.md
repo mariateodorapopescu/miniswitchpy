@@ -4,7 +4,7 @@
 - Instead, the only thing that would be original would be the verification function if it is a unicast address. After some documentation on the internet, I found the formula of check for the unicast address, if it is 0 or 1. So, the first byte of the MAC address is shifted to the right by 0 bits, although it has no influence on the value, but it is more the clarity of the code.
 - A logical "and" operation is performed between the shift result and the value 1, checking if the least significant bit of the first byte is even or odd. How can it be 0 or 1, 0 even, 1 odd.
 
-The pseudocode:
+**The pseudocode:**
 ```
  # Cadrul F este primit pe portul P
 # MAC_Table : Tabela MAC ce face maparea adresa MAC -> port
