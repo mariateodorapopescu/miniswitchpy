@@ -7,7 +7,8 @@ check for the unicast address, if it is 0 or 1. So, the first byte of the MAC ad
 A logical "and" operation is performed between the shift result and the value 1, checking if the least significant bit of the first byte is even or odd. How can it be 0 or 1, 0 even, 1 odd.
 
 The pseudocode:
-`` # Cadrul F este primit pe portul P
+```
+ # Cadrul F este primit pe portul P
 # MAC_Table : Tabela MAC ce face maparea adresa MAC -> port
 # Ports : lista tuturor porturilor de pe switch
 src = F.SourceAddress
@@ -27,4 +28,5 @@ else:
     # trimite cadrul pe toate celelalte porturi
     for o in Ports:
         if o != P:
-            forward_frame(F, o) ``
+            forward_frame(F, o)
+```
